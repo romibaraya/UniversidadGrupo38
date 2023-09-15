@@ -29,9 +29,11 @@ public class UniversidadGrupo38 {
       
       
       
-        Alumno juan=new Alumno(12312567,"García","Rogelio",LocalDate.of(1980, 4 , 25), true);
+        Alumno juan=new Alumno(123122598,"Sosa","Pedro",LocalDate.of(1980, 4 , 25), true);
         AlumnoData alu=new AlumnoData();
-        alu.guardarAlumno(juan);
+        //alu.guardarAlumno(juan);
+        //alu.modificarAlumno(juan);
+        alu.eliminarAlumno(11);
     }
     
 }
