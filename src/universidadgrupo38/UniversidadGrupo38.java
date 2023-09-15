@@ -34,8 +34,7 @@ public class UniversidadGrupo38 {
         //alu.guardarAlumno(juan);
         //alu.modificarAlumno(juan);
         //alu.eliminarAlumno(11);
-        //Alumno alumnoEncontrado=alu.buscarAlumno(23);
-        Alumno alumnoEncontrado=alu.buscarAlumnoPorDni(30825852);
+        Alumno alumnoEncontrado=alu.buscarAlumno(10);
        
         System.out.println("DNI: "+alumnoEncontrado.getDni());
         System.out.println("Apellido: "+alumnoEncontrado.getApellido());
