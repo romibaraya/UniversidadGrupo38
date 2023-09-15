@@ -29,11 +29,15 @@ public class UniversidadGrupo38 {
       
       
       
-        Alumno juan=new Alumno(123122598,"Sosa","Pedro",LocalDate.of(1980, 4 , 25), true);
+        //Alumno juan=new Alumno(123122598,"Sosa","Pedro",LocalDate.of(1980, 4 , 25), true);
         AlumnoData alu=new AlumnoData();
         //alu.guardarAlumno(juan);
         //alu.modificarAlumno(juan);
-        alu.eliminarAlumno(11);
+        //alu.eliminarAlumno(11);
+        Alumno alumnoEncontrado=alu.buscarAlumno(10);
+       
+        System.out.println("DNI: "+alumnoEncontrado.getDni());
+        System.out.println("Apellido: "+alumnoEncontrado.getApellido());
     }
     
 }
