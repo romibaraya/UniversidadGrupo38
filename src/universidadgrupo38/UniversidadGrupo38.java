@@ -9,8 +9,10 @@ import java.sql.Connection;
 import java.time.LocalDate;
 import universidadgrupo38AccesoADatos.AlumnoData;
 import universidadgrupo38AccesoADatos.Conexion;
+import universidadgrupo38AccesoADatos.InscripcionData;
 import universidadgrupo38AccesoADatos.MateriaData;
 import universidadgrupo38Entidades.Alumno;
+import universidadgrupo38Entidades.Inscripcion;
 import universidadgrupo38Entidades.Materia;
 import universidadgrupo38Vistas.Vista;
 /**
@@ -50,29 +52,39 @@ public class UniversidadGrupo38 {
             System.out.println(alumno.getApellido());
             System.out.println(alumno.getNombre());
             System.out.println(alumno.getFechaNac());
-        }
+        }*/
         
       
-      //Materia mate=new Materia(5,"Física I", 2023,true);
+      /*Materia mate=new Materia(1,"Física II", 2023,true);
       MateriaData mat=new MateriaData();
       //mat.guardarMateria(mate);
       //mat.modificarMateria(mate);
-      //mat.eliminarMateria(5);
-      Materia materiaEncontrada=mat.buscarMateria(5);
+      //mat.eliminarMateria(1);
+      /*Materia materiaEncontrada=mat.buscarMateria(2);
       if(materiaEncontrada!=null){
           System.out.println("Materia: "+materiaEncontrada.getNombre());
       }
-      */
       
-      MateriaData mat=new MateriaData();
+      
+      //MateriaData mat=new MateriaData();
       for(Materia materia:mat.listarMaterias()){
           
           System.out.println("Id: "+materia.getIdMateria());
           System.out.println("Materia: "+materia.getNombre() );
           System.out.println("Año: "+materia.getAnioMateria());
           
-      }
+      }*/
       
+      AlumnoData ad = new AlumnoData();
+      MateriaData md=new MateriaData();
+      InscripcionData id= new InscripcionData();
+      
+      Alumno juan = ad.buscarAlumno(9);
+      Materia mate =md.buscarMateria(2);
+      Inscripcion insc = new Inscripcion(juan,mate,9);
+      //id.guardarInscripcion(insc);
+      //id.actualizarNota(9, 2, 7);
+      id.borrarInscripcion(9, 2);
     }
     
 }
