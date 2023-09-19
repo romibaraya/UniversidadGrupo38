@@ -9,7 +9,9 @@ import java.sql.Connection;
 import java.time.LocalDate;
 import universidadgrupo38AccesoADatos.AlumnoData;
 import universidadgrupo38AccesoADatos.Conexion;
+import universidadgrupo38AccesoADatos.MateriaData;
 import universidadgrupo38Entidades.Alumno;
+import universidadgrupo38Entidades.Materia;
 import universidadgrupo38Vistas.Vista;
 /**
  *
@@ -27,8 +29,8 @@ public class UniversidadGrupo38 {
       Connection con=Conexion.getConexion();
       
       
-      /*
       
+      /*
         //Alumno juan=new Alumno(123122598,"Sosa","Pedro",LocalDate.of(1980, 4 , 25), true);
         AlumnoData alu=new AlumnoData();
         //alu.guardarAlumno(juan);
@@ -39,7 +41,7 @@ public class UniversidadGrupo38 {
         System.out.println("DNI: "+alumnoEncontrado.getDni());
         System.out.println("Apellido: "+alumnoEncontrado.getApellido());
         
-*/
+
       
         AlumnoData alu=new AlumnoData ();
         for(Alumno alumno:alu.listarAlumnos()){
@@ -49,6 +51,28 @@ public class UniversidadGrupo38 {
             System.out.println(alumno.getNombre());
             System.out.println(alumno.getFechaNac());
         }
+        
+      
+      //Materia mate=new Materia(5,"Física I", 2023,true);
+      MateriaData mat=new MateriaData();
+      //mat.guardarMateria(mate);
+      //mat.modificarMateria(mate);
+      //mat.eliminarMateria(5);
+      Materia materiaEncontrada=mat.buscarMateria(5);
+      if(materiaEncontrada!=null){
+          System.out.println("Materia: "+materiaEncontrada.getNombre());
+      }
+      */
+      
+      MateriaData mat=new MateriaData();
+      for(Materia materia:mat.listarMaterias()){
+          
+          System.out.println("Id: "+materia.getIdMateria());
+          System.out.println("Materia: "+materia.getNombre() );
+          System.out.println("Año: "+materia.getAnioMateria());
+          
+      }
+      
     }
     
 }
