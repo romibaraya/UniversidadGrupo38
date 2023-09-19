@@ -27,7 +27,7 @@ public class UniversidadGrupo38 {
       Connection con=Conexion.getConexion();
       
       
-      
+      /*
       
         //Alumno juan=new Alumno(123122598,"Sosa","Pedro",LocalDate.of(1980, 4 , 25), true);
         AlumnoData alu=new AlumnoData();
@@ -38,6 +38,17 @@ public class UniversidadGrupo38 {
        
         System.out.println("DNI: "+alumnoEncontrado.getDni());
         System.out.println("Apellido: "+alumnoEncontrado.getApellido());
+        
+*/
+      
+        AlumnoData alu=new AlumnoData ();
+        for(Alumno alumno:alu.listarAlumnos()){
+            
+            System.out.println(alumno.getDni());
+            System.out.println(alumno.getApellido());
+            System.out.println(alumno.getNombre());
+            System.out.println(alumno.getFechaNac());
+        }
     }
     
 }
