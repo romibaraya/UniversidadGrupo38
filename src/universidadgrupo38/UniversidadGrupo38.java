@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package universidadgrupo38;
 
 import java.sql.Connection;
@@ -15,15 +11,10 @@ import universidadgrupo38Entidades.Alumno;
 import universidadgrupo38Entidades.Inscripcion;
 import universidadgrupo38Entidades.Materia;
 import universidadgrupo38Vistas.Vista;
-/**
- *
- * @author Usuario
- */
+
 public class UniversidadGrupo38 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
            Vista pantalla = new Vista();
       pantalla.setVisible(true);
@@ -55,9 +46,9 @@ public class UniversidadGrupo38 {
         }*/
         
       
-      /*Materia mate=new Materia(1,"Física II", 2023,true);
-      MateriaData mat=new MateriaData();
-      //mat.guardarMateria(mate);
+//      Materia mate=new Materia(3,"Arte y Literatura", 2023,true);
+//      MateriaData mat=new MateriaData();
+//      mat.guardarMateria(mate);
       //mat.modificarMateria(mate);
       //mat.eliminarMateria(1);
       /*Materia materiaEncontrada=mat.buscarMateria(2);
@@ -65,7 +56,7 @@ public class UniversidadGrupo38 {
           System.out.println("Materia: "+materiaEncontrada.getNombre());
       }
       
-      
+      /*
       //MateriaData mat=new MateriaData();
       for(Materia materia:mat.listarMaterias()){
           
@@ -84,7 +75,24 @@ public class UniversidadGrupo38 {
       Inscripcion insc = new Inscripcion(juan,mate,9);
       //id.guardarInscripcion(insc);
       //id.actualizarNota(9, 2, 7);
-      id.borrarInscripcion(9, 2);
+      //id.borrarInscripcion(9, 2);
+     
+    /* for(Inscripcion inscripcion : id.obtenerInscripciones() ){
+         System.out.println("id "+ inscripcion.getIdInscripcion() );
+         System.out.println("Apellido "+inscripcion.getAlumno().getApellido());
+         System.out.println("Materia "+inscripcion.getMateria().getNombre());
+         
+     }*/
+     
+    
+    for (Materia materia: id.obtenerMateriasNOCursadas(9)){
+        System.out.println("nombre "+  materia.getNombre());
     }
     
+    
+    
+    
+    }
+     
+     
 }
