@@ -10,13 +10,13 @@ import universidadgrupo38AccesoADatos.MateriaData;
 import universidadgrupo38Entidades.Alumno;
 import universidadgrupo38Entidades.Inscripcion;
 import universidadgrupo38Entidades.Materia;
-import universidadgrupo38Vistas.Vista;
+import universidadgrupo38Vistas.menuView;
 
 public class UniversidadGrupo38 {
 
 
     public static void main(String[] args) {
-           Vista pantalla = new Vista();
+           menuView pantalla = new menuView();
       pantalla.setVisible(true);
       pantalla.setLocationRelativeTo(null);
       Connection con=Conexion.getConexion();
