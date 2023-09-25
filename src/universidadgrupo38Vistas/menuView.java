@@ -47,12 +47,14 @@ public class menuView extends javax.swing.JFrame {
         ;
         jMenuBar1 = new javax.swing.JMenuBar();
         menuAlumno = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        FormularioDeAlumno = new javax.swing.JMenuItem();
         menuMateria = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        FormularioDeMateria = new javax.swing.JMenuItem();
         menuInscripcion = new javax.swing.JMenu();
+        ManejoDeInscripciones = new javax.swing.JMenuItem();
+        ManipulacionDeNotas = new javax.swing.JMenuItem();
         menuNotas = new javax.swing.JMenu();
+        AlumnosPorMateria = new javax.swing.JMenuItem();
         menuSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,30 +72,58 @@ public class menuView extends javax.swing.JFrame {
 
         menuAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/tarjeta-de-identificacion (2).png"))); // NOI18N
 
-        jMenuItem1.setText("Formulario de Alumno");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        FormularioDeAlumno.setText("Formulario de Alumno");
+        FormularioDeAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                FormularioDeAlumnoActionPerformed(evt);
             }
         });
-        menuAlumno.add(jMenuItem1);
+        menuAlumno.add(FormularioDeAlumno);
 
         jMenuBar1.add(menuAlumno);
 
         menuMateria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/archivo-adjunto (1).png"))); // NOI18N
 
-        jMenuItem2.setText("jMenuItem2");
-        menuMateria.add(jMenuItem2);
-
-        jMenuItem3.setText("jMenuItem3");
-        menuMateria.add(jMenuItem3);
+        FormularioDeMateria.setText("Formulario de Materia");
+        FormularioDeMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FormularioDeMateriaActionPerformed(evt);
+            }
+        });
+        menuMateria.add(FormularioDeMateria);
 
         jMenuBar1.add(menuMateria);
 
         menuInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/contrato (1).png"))); // NOI18N
+
+        ManejoDeInscripciones.setText("Manejo de Inscripciones");
+        ManejoDeInscripciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ManejoDeInscripcionesActionPerformed(evt);
+            }
+        });
+        menuInscripcion.add(ManejoDeInscripciones);
+
+        ManipulacionDeNotas.setText("Manipulacion de Notas");
+        ManipulacionDeNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ManipulacionDeNotasActionPerformed(evt);
+            }
+        });
+        menuInscripcion.add(ManipulacionDeNotas);
+
         jMenuBar1.add(menuInscripcion);
 
         menuNotas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/periodico (1).png"))); // NOI18N
+
+        AlumnosPorMateria.setText("Alumnos por Materia");
+        AlumnosPorMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlumnosPorMateriaActionPerformed(evt);
+            }
+        });
+        menuNotas.add(AlumnosPorMateria);
+
         jMenuBar1.add(menuNotas);
 
         menuSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/salir00.png"))); // NOI18N
@@ -115,7 +145,7 @@ public class menuView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void FormularioDeAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FormularioDeAlumnoActionPerformed
         escritorio.removeAll();
         escritorio.repaint();
         FormularioAlumnoView alumno = new FormularioAlumnoView();
@@ -123,7 +153,63 @@ public class menuView extends javax.swing.JFrame {
         alumno.getContentPane().setBackground(new Color(68, 167, 132));
         escritorio.add(alumno);
         
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_FormularioDeAlumnoActionPerformed
+
+    private void FormularioDeMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FormularioDeMateriaActionPerformed
+        
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioMateria materia = new FormularioMateria();
+        materia.setVisible(true);
+        materia.getContentPane().setBackground(new Color(68, 167, 132));
+        escritorio.add(materia);
+        
+        
+        
+        
+    }//GEN-LAST:event_FormularioDeMateriaActionPerformed
+
+    private void ManejoDeInscripcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManejoDeInscripcionesActionPerformed
+
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioInscripcion inscripciones = new FormularioInscripcion();
+        inscripciones.setVisible(true);
+        inscripciones.getContentPane().setBackground(new Color(68, 167, 132));
+        escritorio.add(inscripciones);
+        
+
+
+
+    }//GEN-LAST:event_ManejoDeInscripcionesActionPerformed
+
+    private void ManipulacionDeNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManipulacionDeNotasActionPerformed
+       
+        
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioNotas notas = new FormularioNotas();
+        notas.setVisible(true);
+        notas.getContentPane().setBackground(new Color(68, 167, 132));
+        escritorio.add(notas);
+        
+        
+        
+        
+    }//GEN-LAST:event_ManipulacionDeNotasActionPerformed
+
+    private void AlumnosPorMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlumnosPorMateriaActionPerformed
+
+        escritorio.removeAll();
+        escritorio.repaint();
+        AlumnosPorMateriaView APMV = new AlumnosPorMateriaView();
+        APMV.setVisible(true);
+        APMV.getContentPane().setBackground(new Color(68, 167, 132));
+        escritorio.add(APMV);
+
+
+        
+    }//GEN-LAST:event_AlumnosPorMateriaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,11 +247,13 @@ public class menuView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem AlumnosPorMateria;
+    private javax.swing.JMenuItem FormularioDeAlumno;
+    private javax.swing.JMenuItem FormularioDeMateria;
+    private javax.swing.JMenuItem ManejoDeInscripciones;
+    private javax.swing.JMenuItem ManipulacionDeNotas;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu menuAlumno;
     private javax.swing.JMenu menuInscripcion;
     private javax.swing.JMenu menuMateria;
