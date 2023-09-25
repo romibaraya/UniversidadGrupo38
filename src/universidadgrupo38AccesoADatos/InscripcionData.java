@@ -47,7 +47,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         
         
@@ -71,7 +71,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
     }
     
@@ -93,7 +93,7 @@ public class InscripcionData {
             
             
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         
         
@@ -157,7 +157,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         
         return cursadas;
@@ -188,7 +188,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         return materias;
     }
@@ -215,7 +215,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         return materias;
         
@@ -246,7 +246,7 @@ public class InscripcionData {
             }
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscipcion");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         
         
