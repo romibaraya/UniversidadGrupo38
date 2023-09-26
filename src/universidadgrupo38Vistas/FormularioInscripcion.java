@@ -131,6 +131,11 @@ public class FormularioInscripcion extends javax.swing.JFrame {
         jbAInscribir.setEnabled(false);
 
         jbSalir.setText("Salir");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -261,6 +266,10 @@ public class FormularioInscripcion extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jbInscribirActionPerformed
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_jbSalirActionPerformed
 
     
     

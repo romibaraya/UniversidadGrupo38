@@ -314,7 +314,11 @@ try{
     
     
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+        
+        
         dispose();
+       
+        
     }//GEN-LAST:event_jbSalirActionPerformed
 
     
