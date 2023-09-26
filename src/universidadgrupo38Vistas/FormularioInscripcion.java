@@ -37,7 +37,7 @@ public class FormularioInscripcion extends javax.swing.JFrame {
         initComponents();
         
         aData = new AlumnoData();
-        ListaA = aData.listarAlumnos();
+        ListaA =aData.listarAlumnos();
         modelo= new DefaultTableModel();
         inscData = new InscripcionData();
         mData = new MateriaData();

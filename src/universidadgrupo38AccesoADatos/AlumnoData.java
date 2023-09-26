@@ -26,7 +26,7 @@ public class AlumnoData {
     public void guardarAlumno(Alumno alumno){
         
         String sql="INSERT INTO alumnos(dni, apellido, nombre, fechaNacimiento, estado)"
-                + "VALUES(?, ?, ?, ?, ?)";
+                + " VALUES(?, ?, ?, ?, ?)";
         
         
         try {
@@ -69,7 +69,7 @@ public class AlumnoData {
         
         
         String sql = "UPDATE alumnos SET dni=?, apellido=?, nombre =?, fechaNacimiento=?"
-                + "WHERE idALumno = ?";
+                + " WHERE idALumno = ?";
         
         
        try{ PreparedStatement ps= con.prepareStatement(sql);
