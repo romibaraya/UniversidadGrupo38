@@ -66,13 +66,13 @@ public class UniversidadGrupo38 {
           
       }*/
       
-      AlumnoData ad = new AlumnoData();
-      MateriaData md=new MateriaData();
-      InscripcionData id= new InscripcionData();
-      
-      Alumno juan = ad.buscarAlumno(9);
-      Materia mate =md.buscarMateria(2);
-      Inscripcion insc = new Inscripcion(juan,mate,9);
+//      AlumnoData ad = new AlumnoData();
+//      MateriaData md=new MateriaData();
+//      InscripcionData id= new InscripcionData();
+//      
+//      Alumno juan = ad.buscarAlumno(9);
+//      Materia mate =md.buscarMateria(2);
+//      Inscripcion insc = new Inscripcion(juan,mate,9);
       //id.guardarInscripcion(insc);
       //id.actualizarNota(9, 2, 7);
       //id.borrarInscripcion(9, 2);
@@ -85,13 +85,13 @@ public class UniversidadGrupo38 {
      }*/
      
     
-    for (Materia materia: id.obtenerMateriasNOCursadas(9)){
-        System.out.println("nombre "+  materia.getNombre());
-    }
-    
-    
-    
-    
+//    for (Materia materia: id.obtenerMateriasNOCursadas(9)){
+//        System.out.println("nombre "+  materia.getNombre());
+//    }
+//    
+//    
+//    
+//    
     }
      
      

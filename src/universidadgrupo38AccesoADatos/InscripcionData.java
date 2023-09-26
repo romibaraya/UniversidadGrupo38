@@ -199,7 +199,7 @@ public class InscripcionData {
         ArrayList<Materia> materias = new ArrayList<>();
         
         String sql = "SELECT * FROM materia WHERE estado = 1 AND idMateria not in"
-                + "(SELECT idMateria FROM inscripcion WHERE idAlumno = ?)";
+                + " (SELECT idMateria FROM inscripcion WHERE idAlumno = ?)";
         try {
             
             PreparedStatement ps = con.prepareStatement(sql);
@@ -228,7 +228,7 @@ public class InscripcionData {
         ArrayList<Alumno> alumnosMateria = new ArrayList<>();
         
         String sql = "SELECT a.idAlumno, dni, nombre, apellido, fechaNacimiento, estado"
-                + "FROM inscripcion i, alumno a WHERE i.idAlumno = a.idAlumno AND idMateria=? AND a.estado=1";
+                + " FROM inscripcion i, alumno a WHERE i.idAlumno = a.idAlumno AND idMateria=? AND a.estado=1";
         
         try {
             PreparedStatement ps= con.prepareCall(sql);

@@ -44,13 +44,7 @@ public class FormularioInscripcion extends javax.swing.JFrame {
         
         cargarAlumnos();
         armarCabeceraTabla();
-        
-        
-        inscData = new InscripcionData();
-        mData = new MateriaData();
-        
-        
-        
+  
     }
 
     

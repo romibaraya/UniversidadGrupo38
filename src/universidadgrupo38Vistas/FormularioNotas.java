@@ -1,21 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package universidadgrupo38Vistas;
 
-/**
- *
- * @author Franco
- */
+import universidadgrupo38AccesoADatos.AlumnoData;
+
+import universidadgrupo38AccesoADatos.InscripcionData;
+import universidadgrupo38AccesoADatos.MateriaData;
+import universidadgrupo38Entidades.Alumno;
+import universidadgrupo38Entidades.Inscripcion;
+import universidadgrupo38Entidades.Materia;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+
+import javax.swing.table.DefaultTableModel;
+
+
 public class FormularioNotas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FormularioNotas
-     */
+    
+        private List<Inscripcion> ListaI;
+        private List<Alumno> ListaA;
+        
+        private InscripcionData inscData;
+        private MateriaData mData;
+        private AlumnoData aData;
+        private DefaultTableModel modelo;
+
     public FormularioNotas() {
         initComponents();
+        
+        aData = new AlumnoData();
+        ListaA =aData.listarAlumnos();
+        modelo= new DefaultTableModel();
+        
+        
+        cargarAlumnos();
+        armarCabeceraTabla();
+        
     }
 
     /**
@@ -27,25 +48,102 @@ public class FormularioNotas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        cboxAlumno = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtNotaAlumno = new javax.swing.JTable();
+        jbGuardar = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setText("Carga de Notas");
+
+        jLabel2.setText("Seleccione un alumno:");
+
+        cboxAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxAlumnoActionPerformed(evt);
+            }
+        });
+
+        jtNotaAlumno.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jtNotaAlumno);
+
+        jbGuardar.setText("Guardar");
+
+        jbSalir.setText("Salir");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(cboxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbGuardar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbSalir)))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(cboxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbGuardar)
+                    .addComponent(jbSalir))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+       dispose();
+    }//GEN-LAST:event_jbSalirActionPerformed
+
+    private void cboxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxAlumnoActionPerformed
+
+    }//GEN-LAST:event_cboxAlumnoActionPerformed
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -77,7 +175,55 @@ public class FormularioNotas extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void cargarAlumnos(){
+        for(Alumno item: ListaA){
+            cboxAlumno.addItem(item);
+        }
+    }
+    private void armarCabeceraTabla(){
+        
+        ArrayList<Object> filaCabecera = new ArrayList<>();
+        filaCabecera.add("ID");
+        filaCabecera.add("Nombre");
+        filaCabecera.add("Año");
+        
+        for(Object it: filaCabecera){
+            modelo.addColumn(it);
+        }
+        jtNotaAlumno.setModel(modelo);
 
+    }
+    
+    private void cargarDatosInscriptos(){
+       
+                Alumno selec =(Alumno) cboxAlumno.getSelectedItem();
+       List <Inscripcion> lista = inscData.obtenerInscripcionesPorAlumno(selec.getIdAlumno());
+       
+       for (Inscripcion m : lista){
+            modelo.addRow(new Object[]{m.getIdInscripcion(),m.getMateria(),m.getNota()});
+        }
+        
+    }
+    
+    private void borrarFilaTabla(){
+        
+        int indice = modelo.getRowCount() -1;
+        
+        
+        for(int i = indice; i>=0; i--){
+            modelo.removeRow(i);
+        }
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<Alumno> cboxAlumno;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbGuardar;
+    private javax.swing.JButton jbSalir;
+    private javax.swing.JTable jtNotaAlumno;
     // End of variables declaration//GEN-END:variables
 }
