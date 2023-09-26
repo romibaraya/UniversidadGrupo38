@@ -31,7 +31,7 @@ public class FormularioNotas extends javax.swing.JFrame {
         
         aData = new AlumnoData();
         ListaA =aData.listarAlumnos();
-         inscData = new InscripcionData();
+        inscData = new InscripcionData();
         modelo= new DefaultTableModel();
         
         
@@ -175,9 +175,9 @@ public class FormularioNotas extends javax.swing.JFrame {
                 
             
   
-            
-             inscData.actualizarNota(idAlumno, idMateria , nota);
-                
+                System.out.println(idMateria + " " + idAlumno + " " + nota);
+             inscData.actualizarNota(idAlumno, idMateria , 10);
+               
              borrarFilaTabla();
              
             }
@@ -261,7 +261,7 @@ public class FormularioNotas extends javax.swing.JFrame {
         
        for (Inscripcion m : lista){
            
-            modelo.addRow(new Object[]{m.getIdInscripcion(),m.getMateria().getNombre(),m.getNota()});
+            modelo.addRow(new Object[]{m.getMateria().getIdMateria(),m.getMateria().getNombre(),m.getNota()});
         }
         
     }

@@ -74,6 +74,12 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
 
         jLabel2.setText("Seleccione una materia:");
 
+        cboxMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboxMateriaActionPerformed(evt);
+            }
+        });
+
         jbSalir.setText("Salir");
         jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +144,10 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
     }//GEN-LAST:event_jbSalirActionPerformed
+
+    private void cboxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboxMateriaActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
