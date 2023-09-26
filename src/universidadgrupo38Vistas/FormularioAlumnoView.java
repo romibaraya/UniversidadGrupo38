@@ -18,8 +18,6 @@ public class FormularioAlumnoView extends javax.swing.JFrame {
     
     public FormularioAlumnoView() {
         initComponents();
-      menuView pantalla = new menuView();
-     // pantalla.setVisible(true);
       this.setLocationRelativeTo(null);
     }
 
