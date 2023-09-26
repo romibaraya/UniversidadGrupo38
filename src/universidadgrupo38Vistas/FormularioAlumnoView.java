@@ -18,6 +18,9 @@ public class FormularioAlumnoView extends javax.swing.JFrame {
     
     public FormularioAlumnoView() {
         initComponents();
+      menuView pantalla = new menuView();
+     // pantalla.setVisible(true);
+      this.setLocationRelativeTo(null);
     }
 
     /**
@@ -134,7 +137,7 @@ public class FormularioAlumnoView extends javax.swing.JFrame {
                             .addComponent(jbGuardar)
                             .addGap(18, 18, 18)
                             .addComponent(jbSalir))))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -334,7 +337,7 @@ public class FormularioAlumnoView extends javax.swing.JFrame {
         jtNombre.setText("");
         jrEstado.setSelected(true);
         jcFechaNac.setDate(new Date());
-    }
+}
     
     
     
