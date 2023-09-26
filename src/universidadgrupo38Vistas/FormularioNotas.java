@@ -141,6 +141,12 @@ public class FormularioNotas extends javax.swing.JFrame {
 
     private void cboxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboxAlumnoActionPerformed
 
+       Alumno alumnoSeleccionado = (Alumno) cboxAlumno.getSelectedItem();
+        cargarDatosInscriptos();
+        
+        
+        
+        
     }//GEN-LAST:event_cboxAlumnoActionPerformed
 
     
@@ -186,7 +192,7 @@ public class FormularioNotas extends javax.swing.JFrame {
         ArrayList<Object> filaCabecera = new ArrayList<>();
         filaCabecera.add("ID");
         filaCabecera.add("Nombre");
-        filaCabecera.add("Año");
+        filaCabecera.add("Nota");
         
         for(Object it: filaCabecera){
             modelo.addColumn(it);
