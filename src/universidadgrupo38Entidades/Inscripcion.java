@@ -33,6 +33,10 @@ public class Inscripcion {
         this.nota = nota;
     }
 
+    public Inscripcion(int idMateria, String nombreMateria, int nota) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getIdInscripcion() {
         return idInscripcion;
     }

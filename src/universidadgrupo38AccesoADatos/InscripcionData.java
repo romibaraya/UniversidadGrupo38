@@ -125,7 +125,7 @@ public class InscripcionData {
             ps.close();
             
         } catch (SQLException ex) {
-             
+             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inscripcion");
         }
         
         return cursadas;
@@ -134,9 +134,9 @@ public class InscripcionData {
     
     
     public List<Inscripcion> obtenerInscripcionesPorAlumno(int idAlumno){
-        ArrayList<Inscripcion> cursadas = new ArrayList();
+        ArrayList<Inscripcion> cursadas = new ArrayList<>();
         
-        
+      
         String sql= "SELECT * FROM inscripcion WHERE idAlumno= ?";
         
         try {
@@ -255,6 +255,9 @@ public class InscripcionData {
         
         return alumnosMateria;
     }
+
+
+
     
     
     
