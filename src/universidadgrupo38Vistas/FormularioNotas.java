@@ -28,7 +28,7 @@ public class FormularioNotas extends javax.swing.JFrame {
 
     public FormularioNotas() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
         aData = new AlumnoData();
         ListaA =aData.listarAlumnos();
         inscData = new InscripcionData();

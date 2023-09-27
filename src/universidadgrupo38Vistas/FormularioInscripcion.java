@@ -35,6 +35,7 @@ public class FormularioInscripcion extends javax.swing.JFrame {
 
     public FormularioInscripcion() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
         aData = new AlumnoData();
         ListaA =aData.listarAlumnos();
