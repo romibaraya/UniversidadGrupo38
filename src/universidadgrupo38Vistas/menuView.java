@@ -56,6 +56,7 @@ public class menuView extends javax.swing.JFrame {
         menuNotas = new javax.swing.JMenu();
         AlumnosPorMateria = new javax.swing.JMenuItem();
         menuSalir = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,7 @@ public class menuView extends javax.swing.JFrame {
 
         menuAlumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/tarjeta-de-identificacion (2).png"))); // NOI18N
 
+        FormularioDeAlumno.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         FormularioDeAlumno.setText("Formulario de Alumno");
         FormularioDeAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +86,7 @@ public class menuView extends javax.swing.JFrame {
 
         menuMateria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/archivo-adjunto (1).png"))); // NOI18N
 
+        FormularioDeMateria.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         FormularioDeMateria.setText("Formulario de Materia");
         FormularioDeMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +99,7 @@ public class menuView extends javax.swing.JFrame {
 
         menuInscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/contrato (1).png"))); // NOI18N
 
+        ManejoDeInscripciones.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         ManejoDeInscripciones.setText("Manejo de Inscripciones");
         ManejoDeInscripciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +108,7 @@ public class menuView extends javax.swing.JFrame {
         });
         menuInscripcion.add(ManejoDeInscripciones);
 
+        ManipulacionDeNotas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         ManipulacionDeNotas.setText("Manipulacion de Notas");
         ManipulacionDeNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +120,7 @@ public class menuView extends javax.swing.JFrame {
         jMenuBar1.add(menuInscripcion);
 
         menuNotas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/periodico (1).png"))); // NOI18N
+        menuNotas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
 
         AlumnosPorMateria.setText("Alumnos por Materia");
         AlumnosPorMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +133,16 @@ public class menuView extends javax.swing.JFrame {
         jMenuBar1.add(menuNotas);
 
         menuSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/universidadgrupo38/recursos/salir00.png"))); // NOI18N
+
+        jMenuItem1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jMenuItem1.setText("Salir");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuSalir.add(jMenuItem1);
+
         jMenuBar1.add(menuSalir);
 
         setJMenuBar(jMenuBar1);
@@ -211,6 +227,11 @@ public class menuView extends javax.swing.JFrame {
         
     }//GEN-LAST:event_AlumnosPorMateriaActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -254,6 +275,7 @@ public class menuView extends javax.swing.JFrame {
     private javax.swing.JMenuItem ManipulacionDeNotas;
     private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu menuAlumno;
     private javax.swing.JMenu menuInscripcion;
     private javax.swing.JMenu menuMateria;

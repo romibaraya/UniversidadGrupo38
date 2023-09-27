@@ -217,7 +217,7 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
         
         ArrayList<Object> filaCabecera = new ArrayList<>();
         filaCabecera.add("ID");
-        filaCabecera.add("Año");
+        filaCabecera.add("DNI");
         filaCabecera.add("Apellido");
         filaCabecera.add("Nombre");
         
