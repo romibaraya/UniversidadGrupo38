@@ -223,34 +223,31 @@ public class FormularioMateria extends javax.swing.JFrame {
     
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
 
-try{
-             Integer id= Integer.parseInt(jtCodigo.getText());
-             String nombre = jtNombre.getText();
-             String año = jtAño.getText();
-             if(nombre.isEmpty() || año.isEmpty()){
-                 JOptionPane.showMessageDialog(this,"No puede haber campos vacios");
-                 return;
-             }
-                    
-             
-             Boolean estado = jrEstado.isSelected();
-             if(materiaActual==null){
-                 materiaActual =new Materia (id,nombre,Integer.parseInt(año),estado);
-                 mateData.guardarMateria(materiaActual);
-             }
-             
-             else{
-                 materiaActual.setIdMateria(id);
-                 materiaActual.setNombre(nombre);
-                 materiaActual.setAnioMateria(Integer.parseInt(año));
-                 mateData.modificarMateria(materiaActual);
-             }
-                
-             
-             
-        }catch(NumberFormatException ex){
-            JOptionPane.showMessageDialog(this,"Debe ingresar un número válido");
+ try {
+        Integer id = Integer.parseInt(jtCodigo.getText());
+        String nombre = jtNombre.getText();
+        String año = jtAño.getText();
+        
+        if (nombre.isEmpty() || año.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No puede haber campos vacíos");
+            return;
         }
+        
+        Boolean estado = jrEstado.isSelected(); // Cambiado de materiaActual.isEstado()
+        
+        if (materiaActual == null) {
+            materiaActual = new Materia(id, nombre, Integer.parseInt(año), estado);
+            mateData.guardarMateria(materiaActual);
+        } else {
+            materiaActual.setIdMateria(id);
+            materiaActual.setNombre(nombre);
+            materiaActual.setAnioMateria(Integer.parseInt(año));
+            materiaActual.setEstado(estado); // Cambiado de materiaActual.isEstado()
+            mateData.modificarMateria(materiaActual);
+        }
+    } catch (NumberFormatException ex) {
+        JOptionPane.showMessageDialog(this, "Debe ingresar un número válido");
+    }
             
         
         
