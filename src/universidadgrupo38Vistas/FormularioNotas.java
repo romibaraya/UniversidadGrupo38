@@ -77,9 +77,10 @@ public class FormularioNotas extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jtNotaAlumno.setColumnSelectionAllowed(false);
         jScrollPane1.setViewportView(jtNotaAlumno);
 
-        jbGuardar.setText("Guardar");
+        jbGuardar.setText("Modificar Nota");
         jbGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbGuardarActionPerformed(evt);
@@ -161,31 +162,34 @@ public class FormularioNotas extends javax.swing.JFrame {
     
     
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
+            
+        int filaseleccionada = jtNotaAlumno.getSelectedRow();
 
-            int filaseleccionada= jtNotaAlumno.getSelectedRow();
-            
-            if(filaseleccionada!=-1){
-              
-            Alumno a=(Alumno)cboxAlumno.getSelectedItem();
-            int idMateria=(Integer)modelo.getValueAt(filaseleccionada, 0);
-            
-            int idAlumno = a.getIdAlumno();
-            
-            double nota = (double) modelo.getValueAt(filaseleccionada, 2);
-                
-            
-  
-                System.out.println(idMateria + " " + idAlumno + " " + nota);
-             inscData.actualizarNota(idAlumno, idMateria , 10);
-               
-             borrarFilaTabla();
-             
-            }
+    if (filaseleccionada != -1) {
+        Alumno a = (Alumno) cboxAlumno.getSelectedItem();
+        int idMateria = (Integer) modelo.getValueAt(filaseleccionada, 0);
+        int idAlumno = a.getIdAlumno();
+        
+        // Obtener la nota actual de la celda
+        double notaActual = (Double) modelo.getValueAt(filaseleccionada, 2);
 
-        
-        
-        
-        
+        // Solicitar al usuario la nueva nota
+        String inputNota = JOptionPane.showInputDialog(this, "Ingrese la nueva nota:", notaActual);
+
+        try {
+            // Convertir la entrada del usuario en un valor double
+            double nuevaNota = Double.parseDouble(inputNota);
+
+            // Actualizar la celda en el modelo de datos con la nueva nota
+            modelo.setValueAt(nuevaNota, filaseleccionada, 2);
+
+            // Actualizar la base de datos con la nueva nota
+            inscData.actualizarNota(idAlumno, idMateria, nuevaNota);
+            System.out.println(idAlumno + " " + idMateria + " " + nuevaNota);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Ingrese una nota válida.");
+        }
+    }
         
         
     }//GEN-LAST:event_jbGuardarActionPerformed

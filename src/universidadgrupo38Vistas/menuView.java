@@ -150,7 +150,7 @@ public class menuView extends javax.swing.JFrame {
         escritorio.repaint();
         FormularioAlumnoView alumno = new FormularioAlumnoView();
         alumno.setVisible(true);
-        alumno.getContentPane().setBackground(new Color(68, 167, 132));
+        alumno.getContentPane().setBackground(new Color(26, 83, 91));
         escritorio.add(alumno);
         
     }//GEN-LAST:event_FormularioDeAlumnoActionPerformed
@@ -161,7 +161,7 @@ public class menuView extends javax.swing.JFrame {
         escritorio.repaint();
         FormularioMateria materia = new FormularioMateria();
         materia.setVisible(true);
-        materia.getContentPane().setBackground(new Color(68, 167, 132));
+        materia.getContentPane().setBackground(new Color(255, 107, 107));
         escritorio.add(materia);
         
         

@@ -48,6 +48,7 @@ public class FormularioAlumnoView extends javax.swing.JFrame {
         jbBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(26, 83, 91));
 
         jLabel1.setText("Alumno");
 
