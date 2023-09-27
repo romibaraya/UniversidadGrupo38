@@ -10,7 +10,7 @@ import universidadgrupo38Entidades.Inscripcion;
 import universidadgrupo38Entidades.Materia;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
+
 import javax.swing.table.DefaultTableModel;
 
 
@@ -19,16 +19,17 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
         private List<Materia> ListaM;
         private List<Inscripcion> ListaI;
         private List<Alumno> ListaA;
-        
+        private InscripcionData inscData; 
         private MateriaData mData;
         private AlumnoData aData;
-        private InscripcionData inscData;
+
         
         private DefaultTableModel modelo;
 
 
  public AlumnosPorMateriaView() {
     initComponents();
+    this.setLocationRelativeTo(null);
     
     aData = new AlumnoData();
     mData = new MateriaData(); // Primero inicializa mData
@@ -37,8 +38,9 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
     modelo = new DefaultTableModel();
     inscData = new InscripcionData();
     
-    armarCabeceraTabla();
+
     cargarMaterias();
+        armarCabeceraTabla();
 }
 
 
@@ -165,9 +167,10 @@ public class AlumnosPorMateriaView extends javax.swing.JFrame {
 
     // Carga los alumnos correspondientes en la tabla
     for (Alumno alumno : alumnosMateria) {
+        
         modelo.addRow(new Object[] {
             alumno.getIdAlumno(),
-            alumno.getDni(),
+           alumno.getDni(),
             alumno.getApellido(),
             alumno.getNombre()
         });
