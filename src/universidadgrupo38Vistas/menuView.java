@@ -175,7 +175,7 @@ public class menuView extends javax.swing.JFrame {
         escritorio.repaint();
         FormularioInscripcion inscripciones = new FormularioInscripcion();
         inscripciones.setVisible(true);
-        inscripciones.getContentPane().setBackground(new Color(68, 167, 132));
+        inscripciones.getContentPane().setBackground(new Color(255, 209, 103));
         escritorio.add(inscripciones);
         
 
@@ -190,7 +190,7 @@ public class menuView extends javax.swing.JFrame {
         escritorio.repaint();
         FormularioNotas notas = new FormularioNotas();
         notas.setVisible(true);
-        notas.getContentPane().setBackground(new Color(68, 167, 132));
+        notas.getContentPane().setBackground(new Color(255, 209, 103));
         escritorio.add(notas);
         
         
@@ -204,7 +204,7 @@ public class menuView extends javax.swing.JFrame {
         escritorio.repaint();
         AlumnosPorMateriaView APMV = new AlumnosPorMateriaView();
         APMV.setVisible(true);
-        APMV.getContentPane().setBackground(new Color(68, 167, 132));
+        APMV.getContentPane().setBackground(new Color(78, 205, 196));
         escritorio.add(APMV);
 
 
