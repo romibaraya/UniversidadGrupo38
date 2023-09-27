@@ -139,6 +139,11 @@ public class FormularioInscripcion extends javax.swing.JFrame {
         jbAInscribir.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         jbAInscribir.setText("Anular Inscripcion");
         jbAInscribir.setEnabled(false);
+        jbAInscribir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAInscribirActionPerformed(evt);
+            }
+        });
 
         jbSalir.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         jbSalir.setText("Salir");
@@ -279,6 +284,24 @@ public class FormularioInscripcion extends javax.swing.JFrame {
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         dispose();
     }//GEN-LAST:event_jbSalirActionPerformed
+
+    private void jbAInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAInscribirActionPerformed
+        
+        int filaSeleccionada = jtMaterias.getSelectedRow();
+        
+        if(filaSeleccionada != -1){
+            
+            Alumno a = (Alumno)cboxAlumno.getSelectedItem();
+            int idMateria =(Integer) modelo.getValueAt(filaSeleccionada, 0);
+            
+            inscData.borrarInscripcion(a.getIdAlumno(), idMateria);
+            borrarFilaTabla();
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_jbAInscribirActionPerformed
 
     
     
