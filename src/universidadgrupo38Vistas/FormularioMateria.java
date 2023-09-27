@@ -201,7 +201,7 @@ public class FormularioMateria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jrEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrEstadoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jrEstadoActionPerformed
 
     
@@ -233,7 +233,7 @@ public class FormularioMateria extends javax.swing.JFrame {
             return;
         }
         
-        Boolean estado = jrEstado.isSelected(); // Cambiado de materiaActual.isEstado()
+        Boolean estado = jrEstado.isSelected(); 
         
         if (materiaActual == null) {
             materiaActual = new Materia(id, nombre, Integer.parseInt(año), estado);
@@ -242,7 +242,8 @@ public class FormularioMateria extends javax.swing.JFrame {
             materiaActual.setIdMateria(id);
             materiaActual.setNombre(nombre);
             materiaActual.setAnioMateria(Integer.parseInt(año));
-            materiaActual.setEstado(estado); // Cambiado de materiaActual.isEstado()
+            materiaActual.setEstado(estado); 
+            
             mateData.modificarMateria(materiaActual);
         }
     } catch (NumberFormatException ex) {
